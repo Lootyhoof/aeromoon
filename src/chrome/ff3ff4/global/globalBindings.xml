@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+
+<bindings id="globalBindings"
+   xmlns="http://www.mozilla.org/xbl"
+   xmlns:xul="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   xmlns:xbl="http://www.mozilla.org/xbl">
+
+  <binding id="radio"
+           extends="chrome://global/content/bindings/radio.xml#radio">
+    <content>
+      <xul:hbox class="radio-check-box1" xbl:inherits="selected,checked,disabled">
+        <xul:hbox class="radio-check-box2" flex="1">
+          <xul:image class="radio-check" xbl:inherits="selected,checked,disabled"/>
+        </xul:hbox>
+      </xul:hbox>
+      <xul:hbox class="radio-label-box" align="center" flex="1">
+        <xul:image class="radio-icon" xbl:inherits="src"/>
+        <xul:label class="radio-label" xbl:inherits="xbl:text=label,accesskey,crop" flex="1"/>
+      </xul:hbox>
+    </content>
+  </binding>
+
+  <binding id="radio-with-spacing"
+           extends="chrome://global/skin/globalBindings.xml#radio">
+    <content>
+      <xul:hbox class="radio-spacer-box">
+        <xul:hbox class="radio-check-box1" xbl:inherits="selected,checked,disabled">
+          <xul:hbox class="radio-check-box2" flex="1">
+            <xul:image class="radio-check" xbl:inherits="selected,checked,disabled"/>
+          </xul:hbox>
+        </xul:hbox>
+      </xul:hbox>
+      <xul:hbox class="radio-label-center-box" flex="1">
+        <xul:hbox class="radio-label-box" flex="1">
+          <xul:image class="radio-icon" xbl:inherits="src"/>
+          <xul:label class="radio-label" xbl:inherits="xbl:text=label,accesskey,crop" flex="1"/>
+        </xul:hbox>
+      </xul:hbox>
+    </content>
+  </binding>
+
+  <binding id="toolbarpaletteitem-spacer"
+           extends="chrome://global/content/bindings/toolbar.xml#toolbarpaletteitem">
+    <content>
+      <xul:spacer class="spacer-left"/>
+      <children/>
+      <xul:spacer class="spacer-right"/>
+    </content>
+  </binding>
+
+  <binding id="menulist-compact" display="xul:menu" 
+           extends="chrome://global/content/bindings/menulist.xml#menulist">
+    <content sizetopopup="false">
+      <xul:hbox class="menulist-label-box" flex="1">
+        <xul:image class="menulist-icon" xbl:inherits="src"/>
+        <xul:label class="menulist-label" xbl:inherits="value=label,crop,accesskey" crop="right" flex="1"/>
+      </xul:hbox>
+      <children includes="menupopup"/>
+    </content>
+  </binding>
+  
+  <binding id="restore-back-forward-dropmarker">
+    <content>
+     <children/>
+      <xul:box id="dropmarker-observer1">
+      <xul:observes element="back-button" attribute="disabled"/>
+        <xul:box id="dropmarker-observer2">
+        <xul:observes element="forward-button" attribute="disabled"/>
+          <xul:toolbarbutton
+          id="back-forward-dropmarker"
+          type="menu">
+            <xul:menupopup
+            onpopupshowing="return FillHistoryMenu(event.target);"
+            oncommand="gotoHistoryIndex(event); event.stopPropagation();"
+            onclick="checkForMiddleClick(this, event);"
+            position="after_start"/>
+          </xul:toolbarbutton>
+        </xul:box>
+      </xul:box> 
+    </content>
+  </binding>
+
+</bindings>

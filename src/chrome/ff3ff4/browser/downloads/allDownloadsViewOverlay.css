@@ -1,0 +1,85 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this file,
+ * You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#contentAreaDownloadsView {
+  background-color: ThreeDFace;
+}
+
+#downloadsRichListBox {
+  /** The default listbox appearance comes with an unwanted margin. **/
+  -moz-appearance: none;
+  margin: 0;
+}
+
+#downloadsRichListBox > richlistitem.download {
+  min-height: 46px;
+  padding: 4px 8px 4px 4px;
+}
+
+.downloadTypeIcon {
+  /* Prevent flickering when changing states. */
+  min-height: 32px;
+  min-width: 32px;
+}
+
+.blockedIcon {
+  list-style-image: url("chrome://global/skin/icons/Error.png");
+}
+
+richlistitem[type="download"][alternate="true"]:not([selected="true"]) {
+  background-color: ThreeDLightShadow;
+}
+
+.downloadTarget {
+  margin-bottom: 2px;
+  font-size: larger;
+  -moz-margin-start: 6px;
+  cursor: inherit;
+}
+
+.downloadDetails {
+  font-size: 100%;
+  margin-bottom: 2px;
+  -moz-margin-start: 6px;
+}
+
+.downloadButton {
+  -moz-appearance: none;
+  background: transparent;
+  min-width: 0;
+  min-height: 19px;
+  margin: 0;
+  border: none;
+  padding: 0;
+  margin-top: 5px;
+  list-style-image: url("chrome://mozapps/skin/downloads/buttons.png");
+}
+
+.downloadButton > .button-box {
+  padding: 0;
+}
+
+/*** Button icons ***/
+
+.downloadButton.downloadCancel {
+  -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+.downloadButton.downloadRetry {
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+}
+
+.downloadButton.downloadShow {
+list-style-image: url("chrome://global/skin/icons/folder-item.png");
+-moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+.downloadButton.downloadRetry {
+  -moz-image-region: rect(0px, 64px, 16px, 48px);
+}
+
+
+#searchbox[empty] {
+  color: GrayText;
+}

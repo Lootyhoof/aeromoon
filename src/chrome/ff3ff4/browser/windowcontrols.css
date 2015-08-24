@@ -1,0 +1,62 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+/* ::::: フルスクリーン時のウィンドウコントロール ::::: */
+
+#window-controls {
+  -moz-box-align: center;
+  padding: 0 3px;
+  background-color: rgb(169, 178, 189);
+  border-left: 2px solid;
+  -moz-border-left-colors: rgb(182, 190, 197) rgb(221, 227, 232);
+}
+
+#minimize-button,
+#restore-button,
+#close-button {
+  list-style-image: url("chrome://global/skin/icons/windowControls.png");
+  padding: 0 !important;
+  margin: 0 1px;
+  border-width: 0;
+}
+
+/* ..... 「ウィンドウを最小化」ボタン ..... */
+
+#minimize-button {
+  -moz-image-region: rect(0px, 15px, 16px, 0px);
+}
+
+#minimize-button:hover {
+  -moz-image-region: rect(16px, 15px, 32px, 0px);
+}
+
+#minimize-button:hover:active {
+  -moz-image-region: rect(32px, 15px, 48px, 0px);
+}
+
+/* ..... 「ウィンドウを元のサイズに戻す」ボタン ..... */
+
+#restore-button {
+  -moz-image-region: rect(0px, 30px, 16px, 15px);
+}
+
+#restore-button:hover {
+  -moz-image-region: rect(16px, 30px, 32px, 15px);
+}
+
+#restore-button:hover:active {
+  -moz-image-region: rect(32px, 30px, 48px, 15px);
+}
+
+/* ..... 「ウィンドウを閉じる」ボタン ..... */
+
+#close-button {
+  -moz-image-region: rect(0px, 45px, 16px, 30px);
+}
+
+#close-button:hover {
+  -moz-image-region: rect(16px, 45px, 32px, 30px);
+}
+
+#close-button:hover:active {
+  -moz-image-region: rect(32px, 45px, 48px, 30px);
+}
