@@ -2000,7 +2000,8 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
   border-bottom: 1px solid ThreeDShadow;
 }
 
-#main-window[tabsontop=true] #toolbar-menubar[autohide=false] ~ #TabsToolbar {
+#main-window[tabsontop=true] #toolbar-menubar[autohide=false] ~ #TabsToolbar,
+#TabsToolbar[tabsontop=false] {
   border-top: 1px solid ThreeDShadow;
 }
 
