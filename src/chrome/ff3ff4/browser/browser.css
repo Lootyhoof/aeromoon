@@ -1986,7 +1986,6 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 #TabsToolbar:not(:-moz-lwtheme) {
   -moz-appearance: none;
   background: url("chrome://browser/skin/tabbrowser/tabbrowser-tabs-bkgnd.png") repeat-x;
-  border-top: 1px solid ThreeDShadow;
   background-color: rgb(207,215,235);
   box-shadow: inset 0 -14px 14px -14px #ffffff;
 }
@@ -1999,6 +1998,10 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 
 #TabsToolbar[tabsontop=true]:not(:-moz-lwtheme) {
   border-bottom: 1px solid ThreeDShadow;
+}
+
+#main-window[tabsontop=true] #toolbar-menubar[autohide=false] ~ #TabsToolbar {
+  border-top: 1px solid ThreeDShadow;
 }
 
 .tabbrowser-tabs {
