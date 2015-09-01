@@ -3253,17 +3253,12 @@ panel[dimmed="true"] {
   (-moz-os-version: windows-win7),          
   (-moz-os-version: windows-win8) {
      /* Vertical toolbar border */
-    #main-window[sizemode=normal] #navigator-toolbox::after,
-    #main-window[sizemode=normal] #navigator-toolbox[tabsontop=true] > toolbar:not(#toolbar-menubar):not(#TabsToolbar),
-    #main-window[sizemode=normal] #navigator-toolbox[tabsontop=false] > toolbar:not(#toolbar-menubar):not(#nav-bar) {
+    #main-window[sizemode=normal] #navigator-toolbox:not(:-moz-lwtheme) {
       border-left: 1px solid rgba(10%,10%,10%,.4);
       border-right: 1px solid rgba(10%,10%,10%,.4);
       background-clip: padding-box;
     }
   
-    #main-window[sizemode=normal] #navigator-toolbox > toolbar:-moz-lwtheme {
-      border-color: transparent !important;
-    }
     #main-window[sizemode=normal] #browser-border-start,
     #main-window[sizemode=normal] #browser-border-end {
       display: -moz-box;
