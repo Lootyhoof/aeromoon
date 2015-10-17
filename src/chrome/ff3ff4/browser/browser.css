@@ -46,10 +46,6 @@
 @import url("chrome://global/skin/");
 @import url("chrome://browser/skin/padlock/padlock.css");
 
-/* JEZ: Make zoom controls' parent control appear like a toolbar button to group the two together visually; needs to be
-   done differently on different platforms. */
-@import url("chrome://ff3ff4_os_specific/skin/zoom-controls.css");
-
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
 
