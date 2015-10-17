@@ -30,6 +30,11 @@
 		#tabbrowser-tabs {
 		  min-height: 28px;
 		}
+		
+		#main-window[sizemode=maximized][tabsontop=false] #forward-button,
+        #main-window[sizemode=maximized][tabsontop=false] #back-forward-dropmarker {
+          margin-top: 2px !important;
+        }
 
         #titlebar-buttonbox,
         .titlebar-button {
