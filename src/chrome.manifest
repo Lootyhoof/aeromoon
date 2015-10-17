@@ -2,3 +2,5 @@ skin	browser		aeromoon	chrome/ff3ff4/browser/
 skin	communicator	aeromoon	chrome/ff3ff4/communicator/
 skin	global		aeromoon	chrome/ff3ff4/global/
 skin	mozapps		aeromoon	chrome/ff3ff4/mozapps/
+skin	appver		aeromoon	chrome/ff3ff4/appver/25/ appversion<=26.0.0b2
+skin	appver		aeromoon	chrome/ff3ff4/appver/26/ appversion>26.0.0b2
