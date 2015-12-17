@@ -1,3 +1,7 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 /* ===== xulscrollbars.css ==============================================
   == Styles used by XUL scrollbar-related elements.
   ======================================================================= */
@@ -14,7 +18,7 @@ scrollbar {
   background: url("chrome://global/skin/scrollbar/slider.gif") scrollbar;
 }
 
-scrollbar[orient="vertical"]
+scrollbar[orient="vertical"] 
 {
    -moz-appearance: scrollbartrack-vertical;
 }
@@ -61,7 +65,7 @@ scrollbarbutton:hover:active, scrollbarbutton[active="true"] {
 
 /* ::::: square at the corner of two scrollbars ::::: */
 
-scrollcorner {
+scrollcorner { 
   /* XXX -moz-appearance: scrollcorner; */
   -moz-binding: url(chrome://global/content/bindings/scrollbar.xml#scrollbar-base);
   width: 16px;
@@ -122,7 +126,7 @@ scrollbar[orient="vertical"] > scrollbarbutton[type="decrement"][disabled="true"
     background: url("chrome://global/skin/scrollbar/slider.gif") scrollbar;
   }
 
-  html|div scrollbar[orient="vertical"]
+  html|div scrollbar[orient="vertical"] 
   {
      -moz-appearance: scrollbartrack-vertical;
   }
