@@ -1,0 +1,7 @@
+#TabsToolbar[tabsontop="true"] .tabbrowser-tabs {
+  padding-bottom: 2px;
+}
+
+#TabsToolbar[tabsontop="true"] #alltabs-button {
+  margin-bottom: -3px !important;
+}
