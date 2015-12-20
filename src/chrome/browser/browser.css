@@ -2385,13 +2385,21 @@ tabpanels {
   list-style-image: url("chrome://browser/skin/tabbrowser/tab-arrow-left.png");
 }
 
-.tabs-newtab-button {
+.tabs-newtab-button,
+#TabsToolbar > #new-tab-button,
+#TabsToolbar > toolbarpaletteitem > #new-tab-button {
   list-style-image: url(chrome://browser/skin/tabbrowser/newtab.png);
   -moz-image-region: rect(0, 18px, 18px, 0);
 }
 
 .tabs-newtab-button:hover:active {
   -moz-image-region: rect(0, 36px, 18px, 18px);
+  padding-left: 3px !important;
+}
+
+#TabsToolbar > #new-tab-button:hover:active,
+#TabsToolbar > toolbarpaletteitem > #new-tab-button:hover:active {
+  -moz-image-region: rect(0, 34px, 18px, 16px);
   padding-left: 3px !important;
 }
 
