@@ -1385,7 +1385,7 @@ toolbar[mode="text"] #status4evar-download-button {
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
 .tabbrowser-arrowscrollbox > .scrollbutton-down,
 .tabs-newtab-button,
-.tabs-alltabs-button {
+#TabsToolbar .tabs-alltabs-button {
   -moz-appearance: none;
   margin: 3px 0px 4px;
   border: 2px solid;
@@ -2103,7 +2103,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
 .tabbrowser-arrowscrollbox > .scrollbutton-down,
 .tabs-newtab-button,
-.tabs-alltabs-button {
+#TabsToolbar .tabs-alltabs-button {
   -moz-appearance: none;
   background: url("chrome://browser/skin/tabbrowser/tab-bkgnd.png") repeat-x;
   -moz-border-top-colors: ThreeDShadow rgba(255,255,255,.3);
@@ -2115,7 +2115,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-brighttext,
 .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-lwtheme-brighttext,
 .tabs-newtab-button:-moz-lwtheme-brighttext,
-.tabs-alltabs-button:-moz-lwtheme-brighttext {
+#TabsToolbar .tabs-alltabs-button:-moz-lwtheme-brighttext {
   background-color: rgba(0,0,0,.5);
 }
 
@@ -2123,7 +2123,7 @@ richlistitem[type~="action"][actiontype="switchtab"] > .ac-url-box > .ac-action-
 .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-lwtheme-darktext,
 .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-lwtheme-darktext,
 .tabs-newtab-button:-moz-lwtheme-darktext,
-.tabs-alltabs-button:-moz-lwtheme-darktext {
+#TabsToolbar .tabs-alltabs-button:-moz-lwtheme-darktext {
   background-color: rgba(255,255,255,.5);
 }
 
@@ -2304,7 +2304,7 @@ tabpanels {
 .tabbrowser-arrowscrollbox > .scrollbutton-up,
 .tabbrowser-arrowscrollbox > .scrollbutton-down,
 .tabs-newtab-button,
-.tabs-alltabs-button {
+#TabsToolbar .tabs-alltabs-button {
   width: 18px;
   padding: 0;
   -moz-border-right-colors: ThreeDShadow;
@@ -2313,7 +2313,7 @@ tabpanels {
 
 .tabbrowser-arrowscrollbox > .scrollbutton-up:-moz-system-metric(touch-enabled),
 .tabbrowser-arrowscrollbox > .scrollbutton-down:-moz-system-metric(touch-enabled),
-.tabs-alltabs-button:-moz-system-metric(touch-enabled) {
+#TabsToolbar .tabs-alltabs-button:-moz-system-metric(touch-enabled) {
   min-width: .81cm;
 }
 
@@ -2324,7 +2324,7 @@ tabpanels {
 .tabbrowser-arrowscrollbox > .scrollbutton-up:not([disabled="true"]):hover,
 .tabbrowser-arrowscrollbox > .scrollbutton-down:not([disabled="true"]):hover,
 .tabs-newtab-button:hover,
-.tabs-alltabs-button:hover  {
+#TabsToolbar .tabs-alltabs-button:hover  {
   border-top-width: 1px;
   padding-top: 1px;
   -moz-border-top-colors: ThreeDShadow;
@@ -2401,7 +2401,7 @@ tabpanels {
   border-top-left-radius: 2px;
 }
 
-.tabs-alltabs-button {
+#TabsToolbar .tabs-alltabs-button {
   background-color: -moz-dialog;
   border-left: 1px solid ThreeDShadow !important;
   border-top: 1px solid ThreeDShadow !important;
