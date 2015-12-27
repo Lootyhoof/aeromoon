@@ -31,7 +31,8 @@ richlistitem[type="download"][alternate="true"]:not([selected="true"]) {
   background-color: ThreeDLightShadow;
 }
 
-.downloadTarget {
+.downloadTarget,
+.downloadDisplayName {
   margin-bottom: 2px;
   font-size: larger;
   -moz-margin-start: 6px;
