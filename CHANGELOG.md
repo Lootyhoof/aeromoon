@@ -1,5 +1,8 @@
 # Changelog
 
+### 1.1.1
+- (PM26) add download location styling
+
 ### 1.1.0
 - (PM26) add history menu button
 - show more icons in history/bookmarks menus
