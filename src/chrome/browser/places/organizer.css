@@ -3,6 +3,13 @@
 #placesToolbar {
   padding: 3px;  /* b/f buttons have a 1px image padding */
   -moz-padding-end: 4px;
+  -moz-appearance: none;
+  background: url("chrome://global/skin/icons/mediabar.png") repeat-x;
+  color: white;
+}
+
+#placesToolbox {
+  padding-top: 0;
 }
 
 /* back & forward buttons */
@@ -66,7 +73,7 @@
   padding-top: 2px;
   padding-bottom: 2px;
   -moz-appearance: toolbarbutton;
-  color: -moz-DialogText;
+  color: white;
   border: 1px solid transparent;
 }
 
@@ -96,37 +103,22 @@
 }
 
 /* organize, view and maintenance buttons icons */
-#organizeButton, 
-#viewMenu, 
+#organizeButton,
+#viewMenu,
 #maintenanceButton {
   list-style-image: url("chrome://browser/skin/places/libraryToolbar.png");
 }
 
-/* organize button */
 #organizeButton {
   -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
-#organizeButton:hover,
-#organizeButton[open="true"] {
-  -moz-image-region: rect(16px, 16px, 32px, 0px);
-}
 
-/* view button */
 #viewMenu {
   -moz-image-region: rect(0px, 32px, 16px, 16px);
 }
-#viewMenu:hover,
-#viewMenu[open="true"] {
-  -moz-image-region: rect(16px, 32px, 32px, 16px);
-}
 
-/* maintenance button */
 #maintenanceButton {
   -moz-image-region: rect(0px, 48px, 16px, 32px);
-}
-#maintenanceButton:hover,
-#maintenanceButton[open="true"] {
-  -moz-image-region: rect(16px, 48px, 32px, 32px);
 }
 
 /* Root View */
@@ -151,11 +143,7 @@
   border: 0px;
 }
 
-/* Info box */
-
-/* JEZ: Selector(s) added rather than modified here to maintain backwards compatibility. */
-#infoPaneBox,
-#detailsDeck {
+#infoPaneBox {
   border-top: 1px solid ThreeDShadow;
   padding: 5px;
 }
@@ -163,7 +151,7 @@
 .small, .small[disabled="true"] {
   min-width: 0px;
   padding: 0px 4px 0px 4px;
-  margin: 0px;  
+  margin: 0px;
   border: 0px;
 }
 
@@ -173,11 +161,13 @@
   border: 0px;
 }
 
+
 #infoBoxExpanderLabel {
   -moz-padding-start: 2px;
 }
 
 #organizerScopeBar {
+  -moz-appearance: toolbox;
   padding: 2px 0;
   -moz-padding-end: 3px;
 }
@@ -208,6 +198,89 @@
   border-color: ThreeDDarkShadow !important;
 }
 
+#placesView {
+  border-top: none;
+}
+
+#placesToolbar {
+  min-height: 36px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  -moz-padding-start: 6px;
+  -moz-padding-end: 8px;
+}
+
+#placesView > splitter {
+  border: 0;
+  -moz-border-end: 1px solid;
+  -moz-border-right-colors: #A9B7C9;
+  -moz-border-left-colors: #A9B7C9;
+  min-width: 0;
+  width: 3px !important;
+  background-color: transparent;
+  -moz-margin-start: -3px;
+  position: relative;
+  z-index: 10;
+}
+
+#searchModifiers {
+  border-bottom: 1px solid #A9B7C9;
+}
+
+#organizerScopeBar {
+  -moz-appearance: none;
+  border: none;
+}
+
+#infoPaneBox {
+  border-top-color: #A9B7C9;
+}
+
+#placesView,
+#searchModifiers,
+#infoPane,
+#placesList,
+#placeContent {
+  background-color: #EEF3FA;
+}
+
+/**** Vista default theme: Library's search box needs to be vertically centered ****/
 #searchFilter {
-  margin-right: 0;
+  padding-top: 3px;
+  padding-bottom: 2px;
+  min-height: 22px;
+  -moz-appearance: none;
+  border-width: 1px;
+  -moz-border-top-colors: ThreeDShadow;
+  -moz-border-bottom-colors: ThreeDShadow;
+  -moz-border-right-colors: ThreeDShadow;
+  -moz-border-left-colors: ThreeDShadow;
+}
+
+/* Info box */
+#detailsDeck {
+  border-top: 1px solid ThreeDShadow;
+  padding: 5px;
+}
+
+#infoBoxExpanderLabel {
+  -moz-padding-start: 2px;
+}
+
+#searchFilter {
+  margin: 0;
+}
+
+/**
+ * Downloads pane
+ */
+
+#clearDownloadsButton > .toolbarbutton-icon {
+  display: none;
+}
+
+#clearDownloadsButton {
+  -moz-padding-start: 9px;
+  -moz-padding-end: 9px;
+  color: white;
 }
