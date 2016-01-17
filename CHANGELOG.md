@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.1.2
+- use FF3 Vista-like places toolbar
+- fix close button mappings in findbar and desktop alerts
+
 ### 1.1.1
 - (PM26) add download location styling
 
