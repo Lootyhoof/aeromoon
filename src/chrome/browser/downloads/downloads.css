@@ -312,7 +312,7 @@ toolbar[iconsize="small"] #downloads-indicator:not([counter])[attention] > #down
   text-align: center;
 }
 
-#downloads-indicator-counter:-moz-lwtheme-brighttext {
+toolbar[brighttext] #downloads-indicator-counter {
   color: white;
   text-shadow: 0 0 1px rgba(0,0,0,.7),
                0 1px 1.5px rgba(0,0,0,.5);
