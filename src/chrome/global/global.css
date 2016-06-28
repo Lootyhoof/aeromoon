@@ -311,3 +311,18 @@ label[disabled="true"]:-moz-system-metric(windows-classic) {
 .autoscroller[scrolldir="EW"] {
   background-position: right bottom;
 }
+
+/* :::::: Close button icons ::::: */
+
+.close-icon {
+  list-style-image: url("chrome://global/skin/icons/close.png");
+  -moz-image-region: rect(0, 14px, 14px, 0);
+}
+
+.close-icon:hover {
+  -moz-image-region: rect(0, 28px, 14px, 14px);
+}
+
+.close-icon:hover:active {
+  -moz-image-region: rect(0, 42px, 14px, 28px);
+}
