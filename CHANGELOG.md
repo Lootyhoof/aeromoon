@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.2.0
+- titlebar colorisation for Windows 10
+- use dark window frame detection on Windows 8/10
+- refactor media controls for Pale Moon 26.3
+- use unified close button icons
+- use dark toolbar detection in Pale Moon 26.3 to detect dark system themes
+
 ### 1.1.2
 - use FF3 Vista-like places toolbar
 - fix close button mappings in findbar and desktop alerts
