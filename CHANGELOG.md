@@ -1,5 +1,10 @@
 # Changelog
 
+### 1.3.0
+- PM27: add statusbar styling
+- PM27: add styling for downloads panel components
+- PM27: style devtools
+
 ### 1.2.1
 - ensure Aero toolbar styling is applied consistently
 - improve about: page in preparation for Tycho
