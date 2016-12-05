@@ -18,6 +18,8 @@
 }
 
 .downloadTypeIcon {
+  -moz-margin-end: 8px;
+  -moz-margin-start: 8px;
   /* Prevent flickering when changing states. */
   min-height: 32px;
   min-width: 32px;
