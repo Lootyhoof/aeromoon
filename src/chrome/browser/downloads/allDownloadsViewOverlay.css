@@ -15,6 +15,7 @@
 #downloadsRichListBox > richlistitem.download {
   min-height: 46px;
   padding: 4px 8px 4px 4px;
+  border-bottom: 1px solid ThreeDLightShadow;
 }
 
 .downloadTypeIcon {
