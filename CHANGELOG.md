@@ -1,5 +1,9 @@
 # Changelog
 
+### 1.4.1
+- add separator to download items in places
+- Vista/Win7: remove text shadow from menubar when tabs on top
+
 ### 1.4.0
 - support PM27's devtools
 - drop PM26 support
