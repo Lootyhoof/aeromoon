@@ -3397,10 +3397,10 @@ panel[dimmed="true"] {
   @media (-moz-os-version: windows-vista),
          (-moz-os-version: windows-win7) {
     /* Make the menu toolbar and tabs toolbar transparent in Aero+glass IIF tabs are on top and menu toolbar is autohidden */
-    #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"],
+    #main-window[tabsintitlebar] #navigator-toolbox[tabsontop="true"],
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"],
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] ~ #TabsToolbar {
-      background: transparent;
+      background: transparent !important;
       /* Give text an aura to make it more readable on glass */
       text-shadow: 0 0 .5em white, 0 0 .5em white, 0 0 .5em white, 0 0 .5em white, 0 1px 0 rgba(255,255,255,.4);
     }
@@ -3413,10 +3413,10 @@ panel[dimmed="true"] {
   @media (-moz-os-version: windows-win8),
          (-moz-os-version: windows-win10) {
     /* Make the menu toolbar and tabs toolbar transparent in Aero+glass IIF tabs are on top and menu toolbar is autohidden */
-    #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"],
+    #main-window[tabsintitlebar] #navigator-toolbox[tabsontop="true"],
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"],
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"] ~ #TabsToolbar {
-      background: transparent;
+      background: transparent !important;
       /* Use a light text color rather than fog on Win8/10 */
       color: white;
     }
