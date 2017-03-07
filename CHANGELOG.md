@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.4.2
+- provide icon for visited livemarks
+- sync devtools styling with default
+- style toolbarbutton-badge and allow extensions to style it
+- reference download icons correctly
+
 ### 1.4.1
 - add separator to download items in places
 - Vista/Win7: remove text shadow from menubar when tabs on top
