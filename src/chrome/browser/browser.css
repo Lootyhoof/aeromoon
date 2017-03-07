@@ -532,6 +532,11 @@ menuitem.bookmark-item {
   -moz-image-region: auto;
 }
 
+.bookmark-item[container][livemark] .bookmark-item[visited] {
+  list-style-image: url("chrome://browser/skin/Bookmarks-folder.png");
+  -moz-image-region: auto;
+}
+
 .bookmark-item[container][query] {
   list-style-image: url("chrome://browser/skin/places/query.png");
   -moz-image-region: auto;
