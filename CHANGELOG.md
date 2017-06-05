@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.5.0
+- sync about:support styling with default
+- sync about:permissions styling with default
+- add image document favicon when viewing standalone images
+- fix "learn more" links in notification popups
+- use Aero Glass styling in in-content pages
+
 ### 1.4.2
 - provide icon for visited livemarks
 - sync devtools styling with default

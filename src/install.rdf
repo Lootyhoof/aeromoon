@@ -9,7 +9,7 @@
 
   <Description about="urn:mozilla:install-manifest">
     <em:id>{edbb972f-e557-4870-b98e-98e62085837f}</em:id>
-    <em:version>1.4.2</em:version>
+    <em:version>1.5.0</em:version>
     <em:name>Aeromoon</em:name>
     <em:description>Experience all the benefits of Pale Moon with the colorful toolbar goodness of Firefox 3 Aero (Win Vista/7 theme)! Fork of "Firefox 3 theme for Firefox 4+ Reloaded!" by dallasthemaster and Jeremy Morton</em:description>
     <em:creator>Lootyhoof</em:creator>
