@@ -1,4 +1,7 @@
 <?xml version="1.0"?>
+<!-- This Source Code Form is subject to the terms of the Mozilla Public
+   - License, v. 2.0. If a copy of the MPL was not distributed with this
+   - file, You can obtain one at http://mozilla.org/MPL/2.0/. -->
 
 <bindings id="globalBindings"
    xmlns="http://www.mozilla.org/xbl"
@@ -68,12 +71,16 @@
         <xul:observes element="forward-button" attribute="disabled"/>
           <xul:toolbarbutton
           id="back-forward-dropmarker"
-          type="menu">
+          type="menu" 
+          disabled="false">
             <xul:menupopup
-            onpopupshowing="return FillHistoryMenu(event.target);"
-            oncommand="gotoHistoryIndex(event); event.stopPropagation();"
-            onclick="checkForMiddleClick(this, event);"
-            position="after_start"/>
+              context=""
+              position="after_start"
+              onpopupshowing="return FillHistoryMenu(event.target);"
+              oncommand="gotoHistoryIndex(event); event.stopPropagation();"
+              onclick="checkForMiddleClick(this, event);"/>
+            <xul:observes element="Browser:Back" attribute="disabled"/>
+            <xul:observes element="Browser:Forward" attribute="disabled"/>
           </xul:toolbarbutton>
         </xul:box>
       </xul:box> 

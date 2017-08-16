@@ -1,3 +1,7 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
 #downloadManager {
   background-color: ThreeDFace;
 }
@@ -109,12 +113,4 @@ richlistitem[type="download"] .dateTime {
   min-height: 0;
   min-width: 0;
   margin-top: 3px;
-}
-
-@media all and (-moz-windows-compositor) {
-  #downloadView {
-    /* Clamp glass bounds to the rich list so our glass haze stays constant. */
-    -moz-appearance: -moz-win-exclude-glass;
-    border: none;
-  }
 }

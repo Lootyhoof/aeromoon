@@ -2,10 +2,6 @@
  * License, v. 2.0. If a copy of the MPL was not distributed with this file,
  * You can obtain one at http://mozilla.org/MPL/2.0/. */
 
-#contentAreaDownloadsView {
-  background-color: ThreeDFace;
-}
-
 #downloadsRichListBox {
   /** The default listbox appearance comes with an unwanted margin. **/
   -moz-appearance: none;
@@ -13,77 +9,92 @@
 }
 
 #downloadsRichListBox > richlistitem.download {
-  min-height: 46px;
-  padding: 4px 8px 4px 4px;
+  height: 6em;
+  padding: 5px 8px;
   border-bottom: 1px solid ThreeDLightShadow;
 }
 
 .downloadTypeIcon {
   -moz-margin-end: 8px;
   -moz-margin-start: 8px;
-  /* Prevent flickering when changing states. */
-  min-height: 32px;
-  min-width: 32px;
+  /* explicitly size the icon, so size doesn't vary on hidpi systems */
+  height: 32px;
+  width: 32px;
 }
 
 .blockedIcon {
   list-style-image: url("chrome://global/skin/icons/Error.png");
 }
 
-richlistitem[type="download"][alternate="true"]:not([selected="true"]) {
-  background-color: ThreeDLightShadow;
-}
-
 .downloadTarget,
 .downloadDisplayName {
-  margin-bottom: 2px;
-  font-size: larger;
-  -moz-margin-start: 6px;
+  margin-bottom: 3px;
   cursor: inherit;
 }
 
 .downloadDetails {
-  font-size: 100%;
-  margin-bottom: 2px;
-  -moz-margin-start: 6px;
+  opacity: 0.7;
+  font-size: 95%;
+  cursor: inherit;
 }
 
 .downloadButton {
   -moz-appearance: none;
   background: transparent;
   min-width: 0;
-  min-height: 19px;
-  margin: 0;
+  min-height: 0;
+  margin: 3px;
   border: none;
-  padding: 0;
-  margin-top: 5px;
+  padding: 5px;
   list-style-image: url("chrome://browser/skin/downloads/buttons.png");
-}
-
-.downloadButton > .button-box {
-  padding: 0;
 }
 
 /*** Button icons ***/
 
 .downloadButton.downloadCancel {
-  -moz-image-region: rect(0px, 32px, 16px, 16px);
+  -moz-image-region: rect(0px, 16px, 16px, 0px);
 }
 
-.downloadButton.downloadRetry {
+richlistitem.download:hover > .downloadButton.downloadCancel {
+   -moz-image-region: rect(0px, 32px, 16px, 16px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadCancel:hover {
+  -moz-image-region: rect(0px, 48px, 16px, 32px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadCancel:active {
   -moz-image-region: rect(0px, 64px, 16px, 48px);
 }
 
 .downloadButton.downloadShow {
-list-style-image: url("chrome://global/skin/icons/folder-item.png");
--moz-image-region: rect(0px, 32px, 16px, 16px);
+  -moz-image-region: rect(16px, 16px, 32px, 0px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadShow {
+   -moz-image-region: rect(16px, 32px, 32px, 16px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadShow:hover {
+  -moz-image-region: rect(16px, 48px, 32px, 32px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadShow:active {
+  -moz-image-region: rect(16px, 64px, 32px, 48px);
 }
 
 .downloadButton.downloadRetry {
-  -moz-image-region: rect(0px, 64px, 16px, 48px);
+  -moz-image-region: rect(32px, 16px, 48px, 0px);
 }
 
+richlistitem.download:hover > .downloadButton.downloadRetry {
+   -moz-image-region: rect(32px, 32px, 48px, 16px);
+}
 
-#searchbox[empty] {
-  color: GrayText;
+richlistitem.download:hover > .downloadButton.downloadRetry:hover {
+  -moz-image-region: rect(32px, 48px, 48px, 32px);
+}
+
+richlistitem.download:hover > .downloadButton.downloadRetry:active {
+  -moz-image-region: rect(32px, 64px, 48px, 48px);
 }

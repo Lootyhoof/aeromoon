@@ -34,7 +34,7 @@
   min-height: 20px;
   -moz-box-align: center;
   background: url(navbar-textbox-buttons.png) repeat-x;
-  background-color: -moz-dialog;
+  background-color: rgb(240,240,240);
   border: 0 solid;
   border-right-width: 1px;
   -moz-border-right-colors: ThreeDShadow;
