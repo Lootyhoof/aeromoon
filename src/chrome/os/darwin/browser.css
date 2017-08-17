@@ -45,6 +45,12 @@
   margin-top: 2px !important;
 }
 
+/* Searchbar fix */
+
+.searchbar-textbox:not(:-moz-lwtheme) {
+  border: 1px solid var(--shadow-color) !important;
+}
+
 /* ::::: bookmark buttons ::::: */
 
 toolbarbutton.bookmark-item {
@@ -91,4 +97,22 @@ toolbarbutton.bookmark-item > menupopup {
 .bookmark-item > .toolbarbutton-icon[label]:not([label=""]),
 .bookmark-item > .toolbarbutton-icon[type="menu"] {
   -moz-margin-end: 5px;
+}
+
+/* Reduce margins on back/forward keyhole icons */
+
+toolbar[iconsize="large"][mode="icons"] #forward-button,
+toolbar[iconsize="large"][mode="icons"] #back-forward-dropmarker {
+  margin-left: -2px !important;
+}
+
+toolbar[iconsize="small"][mode="icons"] #forward-button,
+toolbar[iconsize="small"][mode="icons"] #back-forward-dropmarker {
+  margin-left: -3px !important;
+}
+
+/* Appcontent fix/hack */
+
+#appcontent {
+  margin: 0 -5px !important;
 }
