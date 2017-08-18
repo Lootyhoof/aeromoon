@@ -55,18 +55,6 @@
   border-top: none;
 }
 
-#navigator-toolbox::after {
-  content: "";
-  display: -moz-box;
-  -moz-box-ordinal-group: 101; /* tabs toolbar is 100 */
-  height: 1px;
-  background-color: var(--shadow-color);
-}
-#navigator-toolbox[tabsontop=false]::after,
-#main-window[disablechrome] #navigator-toolbox::after {
-  visibility: collapse;
-}
-
 #navigator-toolbox > toolbar:not(#TabsToolbar):not(:-moz-lwtheme) {
   -moz-appearance: none;
   border-style: none;
@@ -3378,7 +3366,7 @@ html|*#gcli-output-frame {
 }
 
 #main-window[privatebrowsingmode=temporary] #toolbar-menubar {
-  background-image: url("chrome://browser/skin/Privacy-16.png");
+  background-image: url("chrome://browser/skin/privatebrowsing-dark.png");
   background-position: top right;
   background-repeat: no-repeat;
 }
