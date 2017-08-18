@@ -212,58 +212,46 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadShow {
 /*** Main indicator icon ***/
 
 #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-large.png"),
                               0, 144, 24, 120) no-repeat;
   width:24px;
-  height:22px;
+  height:24px;
 }
 
 toolbar[iconsize="small"] #downloads-indicator-icon {
   background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
                               0, 96, 15, 80) no-repeat;
   width:16px;
-  height:15px;
+  height:16px;
 }
 
 #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
   background: url("chrome://browser/skin/downloads/download-glow.png") center no-repeat;
-  width:24px;
-  height:22px;
-}
-
-toolbar[iconsize="small"] #downloads-indicator[attention] > #downloads-indicator-anchor > #downloads-indicator-icon {
-  background: url("chrome://browser/skin/downloads/download-glow.png") center no-repeat;
-  width:16px;
-  height:15px;
+  width:18px;
+  height:18px;
 }
 
 /* In the next few rules, we use :not([counter]) as a shortcut that is
    equivalent to -moz-any([progress], [paused]). */
 
 #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar.png"),
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-large.png"),
                               0, 144, 24, 120) no-repeat;
   width:24px;
-  height:22px;
+  height:24px;
 }
 
 toolbar[iconsize="small"] #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
   background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
                               0, 96, 15, 80) no-repeat;
   width:16px;
-  height:15px;
+  height:16px;
 }
 
 #downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: url("chrome://browser/skin/downloads/download-glow-big.png") center no-repeat;
-  width:24px;
-  height:22px;
-}
-
-toolbar[iconsize="small"] #downloads-indicator:not([counter])[attention] > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
   background: url("chrome://browser/skin/downloads/download-glow.png") center no-repeat;
-  width:16px;
-  height:15px;
+  width:18px;
+  height:18px;
 }
 
 /*** Download notifications ***/

@@ -89,17 +89,15 @@ toolbar[mode="icons"] #status4evar-download-button[forcelabel="true"] > label {
 }
 
 #status4evar-download-button #status4evar-download-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-large.png"), 0, 288, 48, 240) center no-repeat;
-  background-size: 24px;
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-large.png"), 0, 144, 24, 120) center no-repeat;
   width: 24px;
   height: 24px;
 }
 
 toolbar[iconsize="small"] #status4evar-download-button #status4evar-download-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"), 0, 192, 32, 160) center no-repeat;
-  background-size: 16px;
-  width: 14px;
-  height: 14px;
+  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"), 0, 95, 15, 80) center no-repeat;
+  width: 16px;
+  height: 15px;
 }
 
 #status4evar-download-button[attention] #status4evar-download-icon {
