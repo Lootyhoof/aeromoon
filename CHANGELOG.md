@@ -1,5 +1,25 @@
 # Changelog
 
+### 2.0.0
+- refactor toolbarbutton styling
+- refactor tab styling
+- unify platform stylings
+- add basic OS X support
+- add CSS variables for increased customization
+- add private browsing indicator in menubar and (Linux only) tabbar
+- sync devtools styling with default
+- improve sidebar appearance on Windows
+- fix appmenu/caption button margins when tabs are in the titlebar
+- improve tab appearance in tabs in titlebar mode
+- add missing HTTPS icon for devtools network panel
+- ensure that all notification panel icons are shown correctly
+- fix notification icon selectors
+- fix page info dialog styling
+- sync plugins UI with default
+- PM27.5: draw a background on Win10 for better accent color detection
+- remove Social API components
+- major cleanup of stylings
+
 ### 1.5.0
 - sync about:support styling with default
 - sync about:permissions styling with default
