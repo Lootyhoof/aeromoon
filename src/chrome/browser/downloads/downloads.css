@@ -27,15 +27,6 @@
   max-width: 40ch;
 }
 
-@media (-moz-windows-default-theme) {
-  #downloadsFooter {
-    background-color: hsla(216,45%,88%,.98);
-    box-shadow: 0px 1px 2px rgb(204,214,234) inset;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-  }
-}
-
 #downloadsHistory {
   background: transparent;
   color: -moz-nativehyperlinktext;
@@ -50,6 +41,13 @@
 #downloadsHistory > .button-box {
   border: none;
   margin: 1em;
+}
+
+#downloadsFooter {
+  background-color: #f1f5fb;
+  box-shadow: 0px 1px 2px rgb(204,214,234) inset;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
 }
 
 /*** Downloads Summary and List items ***/
