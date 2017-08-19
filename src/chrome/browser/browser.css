@@ -2262,6 +2262,14 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   height: 32px;
 }
 
+.popup-notification-icon[popupid="click-to-play-plugins"] {
+  list-style-image: url(chrome://mozapps/skin/plugins/pluginBlocked-64.png);
+}
+
+.popup-notification-icon[popupid="web-notifications"] {
+  list-style-image: url(chrome://browser/skin/notification-64.png);
+}
+
 .addon-progress-description {
   width: 350px;
   max-width: 350px;
@@ -2294,7 +2302,9 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
 }
 
 .popup-notification-icon[popupid="indexedDB-permissions-prompt"],
-.popup-notification-icon[popupid="indexedDB-quota-prompt"] {
+.popup-notification-icon[popupid="indexedDB-quota-prompt"],
+.popup-notification-icon[popupid*="offline-app-requested"],
+.popup-notification-icon[popupid="offline-app-usage"] {
   list-style-image: url(chrome://global/skin/icons/question-64.png);
 }
 
@@ -2303,8 +2313,17 @@ toolbarbutton.bookmark-item[dragover="true"][open="true"] {
   list-style-image: url(chrome://mozapps/skin/passwordmgr/key-64.png);
 }
 
+.popup-notification-icon[popupid="webapps-install"] {
+  list-style-image: url(chrome://browser/skin/webapps-64.png);
+}
+
 .popup-notification-icon[popupid="mixed-content-blocked"] {
   list-style-image: url(chrome://browser/skin/mixed-content-blocked-64.png);
+}
+
+.popup-notification-icon[popupid="webRTC-sharingDevices"],
+.popup-notification-icon[popupid="webRTC-shareDevices"] {
+  list-style-image: url(chrome://browser/skin/webRTC-shareDevice-64.png);
 }
 
 .popup-notification-icon[popupid="pointerLock"] {
