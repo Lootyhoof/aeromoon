@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.0.1
+- use correct console icons
+- improve private browsing indicator in appmenu
+
 ### 2.0.0
 - refactor toolbarbutton styling
 - refactor tab styling
