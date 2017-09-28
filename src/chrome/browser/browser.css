@@ -5,7 +5,6 @@
 @import url("chrome://global/skin/");
 @import url("chrome://browser/skin/padlock/padlock.css");
 @import url("chrome://os/skin/browser.css");
-@import url("chrome://appver/skin/browser.css");
 
 @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
 @namespace html url("http://www.w3.org/1999/xhtml");
@@ -2645,31 +2644,6 @@ window:not([chromehidden~=toolbar]) #navigator-toolbox[iconsize=large][mode=icon
 
 .allTabs-preview:focus > * > .allTabs-preview-inner {
   outline: 1px dotted var(--dialog-text-color);
-}
-
-/* Inspector / Highlighter */
-
-#highlighter-panel {
-  -moz-appearance: none;
-  -moz-window-shadow: none;
-  background: linear-gradient(top -1deg, #ffdd88, #ffeeaa);
-  border: none;
-  opacity: 0.35;
-}
-
-listitem.style-selector {
-  background-color: DarkGray;
-  color: white;
-}
-
-listitem.style-section {
-  background-color: LightGray;
-  color: black;
-  font-weight: bold;
-}
-
-panel[dimmed="true"] {
-  opacity: 0.5;
 }
 
 /* Add-on bar */
