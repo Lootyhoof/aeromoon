@@ -893,6 +893,13 @@ toolbar[iconsize="small"][mode="icons"] #back-forward-dropmarker:not([disabled="
   -moz-image-region: rect(0px 24px 24px 0px);
 }
 
+/* all-tabs button */
+
+toolbar:not(#TabsToolbar) #alltabs-button {
+  list-style-image: var(--toolbarbutton-large-image);
+  -moz-image-region: rect(0, 480px, 24px, 456px);
+}
+
 /* ::::: 16px primary toolbar buttons ::::: */
 
 toolbar[iconsize="small"] :-moz-any(#back-button, #forward-button, #stop-button, #reload-button, #home-button, #downloads-button, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #print-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-in-button, #zoom-out-button, #feed-button, #sync-button) .toolbarbutton-icon {
@@ -1082,6 +1089,13 @@ toolbar[iconsize="small"] #sync-button {
 toolbar[iconsize="small"] #sync-button[status="active"] {
   list-style-image: url("chrome://browser/skin/sync-16-throbber.png");
   -moz-image-region: rect(0px 16px 16px 0px);
+}
+
+/* all-tabs button */
+
+toolbar[iconsize="small"]:not(#TabsToolbar) #alltabs-button {
+  list-style-image: var(--toolbarbutton-small-image);
+  -moz-image-region: rect(0, 320px, 16px, 304px);
 }
 
 /* ::::: fullscreen window controls ::::: */
@@ -2007,21 +2021,9 @@ tabpanels {
   padding-top: 0 !important;
 }
 
-.tabs-alltabs-button:hover {
+#TabsToolbar .tabs-alltabs-button:hover {
   background-image: none !important;
   margin-bottom: 2px;
-}
-
-toolbar:not(#TabsToolbar) #alltabs-button {
-  background: none;
-  list-style-image: url("chrome://browser/skin/tabbrowser/alltabs.png");
-  -moz-image-region: rect(0, 14px, 20px, 0);
-  border-top-left-radius: 2px;
-  padding: 0;
-}
-
-toolbar:not(#TabsToolbar) #alltabs-button:hover:active {
-  -moz-image-region: rect(0, 28px, 20px, 14px);
 }
 
 #main-window[tabsintitlebar] #TabsToolbar .tabs-alltabs-button {
