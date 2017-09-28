@@ -2693,6 +2693,10 @@ panel[dimmed="true"] {
   border-top: 1px solid var(--shadow-color) !important;
 }
 
+#addon-bar:not(:-moz-lwtheme) {
+  -moz-appearance: statusbar;
+}
+
 #status-bar {
   -moz-appearance: none;
   background-color: transparent;
