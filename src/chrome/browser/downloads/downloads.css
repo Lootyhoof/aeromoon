@@ -210,14 +210,14 @@ richlistitem[type="download"]:hover > stack > .downloadButton.downloadShow {
 /*** Main indicator icon ***/
 
 #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-large.png"),
+  background: -moz-image-rect(var(--toolbarbutton-large-image),
                               0, 144, 24, 120) no-repeat;
   width:24px;
   height:24px;
 }
 
 toolbar[iconsize="small"] #downloads-indicator-icon {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
+  background: -moz-image-rect(var(--toolbarbutton-small-image),
                               0, 96, 15, 80) no-repeat;
   width:16px;
   height:16px;
@@ -233,14 +233,14 @@ toolbar[iconsize="small"] #downloads-indicator-icon {
    equivalent to -moz-any([progress], [paused]). */
 
 #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-large.png"),
+  background: -moz-image-rect(var(--toolbarbutton-large-image),
                               0, 144, 24, 120) no-repeat;
   width:24px;
   height:24px;
 }
 
 toolbar[iconsize="small"] #downloads-indicator:not([counter]) > #downloads-indicator-anchor > #downloads-indicator-progress-area > #downloads-indicator-counter {
-  background: -moz-image-rect(url("chrome://browser/skin/Toolbar-small.png"),
+  background: -moz-image-rect(var(--toolbarbutton-small-image),
                               0, 96, 15, 80) no-repeat;
   width:16px;
   height:16px;
