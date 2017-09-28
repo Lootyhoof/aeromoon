@@ -6,6 +6,3 @@ skin	mozapps		aeromoon	chrome/mozapps/
 skin	os			aeromoon	chrome/os/winnt/		os=WINNT	
 skin	os			aeromoon	chrome/os/linux/		os=Linux
 skin	os			aeromoon	chrome/os/darwin/		os=Darwin
-
-skin	appver		aeromoon	chrome/appver/274/		appversion<27.5.0a1
-skin	appver		aeromoon	chrome/appver/275/		appversion>=27.5.0a1
