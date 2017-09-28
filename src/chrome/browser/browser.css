@@ -23,7 +23,7 @@
   --toolbar-highlight-bottom: transparent;
 
   --tab-background: url("chrome://browser/skin/tabbrowser/tab-bkgnd.png") repeat-x;
-  --tab-background-hover: url("chrome://browser/skin/tabbrowser/tab-hover-bkgnd.apng") repeat-x;
+  --tab-background-hover: url("chrome://browser/skin/tabbrowser/tab-hover-bkgnd.apng") 0px -2px repeat-x;
   --tab-border-radius: 2px;
   --tab-selected-background: var(--dialog-color) url("chrome://browser/skin/tabbrowser/tab-active-bkgnd.png") repeat-x;
 
@@ -483,10 +483,6 @@ toolbar[mode=full] .toolbarbutton-1:not([type=menu-button]) {
 
 #tab-view-deck #unified-back-forward-button {
   -moz-binding: url(chrome://global/skin/globalBindings.xml#restore-back-forward-dropmarker);
-}
-
-#tab-view-deck #unified-back-forward-button dropmarker {
-  display: none !important;
 }
 
 toolbar[mode="full"] .toolbarbutton-1,
