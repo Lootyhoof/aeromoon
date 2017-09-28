@@ -449,15 +449,15 @@ toolbar[mode=full] .toolbarbutton-1:not([type=menu-button]) {
   -moz-box-orient: horizontal;
 }
 
-.toolbarbutton-1:not([disabled="true"]):not([badge]):hover:not(:active) .toolbarbutton-icon {
-  filter: saturate(150%) brightness(110%);
+:-moz-any(#back-button, #forward-button):not([disabled="true"]):hover .toolbarbutton-icon {
+  filter: brightness(125%);
 }
 
-.toolbarbutton-1:not([disabled="true"]):not([badge]):hover:active .toolbarbutton-icon {
-  filter: brightness(75%);
+:-moz-any(#stop-button, #reload-button, #home-button, #downloads-button, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #print-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-in-button, #zoom-out-button, #feed-button, #sync-button, #alltabs-button):not([disabled="true"]):hover .toolbarbutton-icon {
+  filter: brightness(90%) contrast(110%);
 }
 
-.toolbarbutton-1[disabled="true"]:not([badge]) {
+:-moz-any(#back-button, #forward-button, #stop-button, #reload-button, #home-button, #downloads-button, #history-button, #history-menu-button, #bookmarks-button, #bookmarks-menu-button, #print-button, #new-tab-button, #new-window-button, #cut-button, #copy-button, #paste-button, #fullscreen-button, #zoom-in-button, #zoom-out-button, #feed-button, #sync-button, #alltabs-button)[disabled="true"] {
   filter: grayscale(100%);
   opacity: 0.4;
 }
