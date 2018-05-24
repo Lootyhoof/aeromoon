@@ -13,7 +13,10 @@
 
 panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"],
-.autocomplete-history-popup {
+.autocomplete-history-popup,
+panel[type="private-autocomplete"],
+panel[type="private-autocomplete-richlistbox"],
+.private-autocomplete-history-popup {
   -moz-appearance: none;
   border-width: 1px;
   -moz-border-top-colors: ThreeDDarkShadow;
@@ -26,16 +29,19 @@ panel[type="autocomplete-richlistbox"],
 
 /* ::::: richlistbox autocomplete ::::: */
 
-.autocomplete-richlistbox {
+.autocomplete-richlistbox,
+.private-autocomplete-richlistbox {
   -moz-appearance: none;
   margin: 0;
 }
 
-.autocomplete-richlistitem {
+.autocomplete-richlistitem,
+.private-autocomplete-richlistitem {
   padding: 1px;
 }
 
-.autocomplete-richlistitem[selected="true"] {
+.autocomplete-richlistitem[selected="true"],
+.private-autocomplete-richlistitem[selected="true"] {
   background-color: Highlight;
   color: HighlightText;
 }

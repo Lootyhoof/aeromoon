@@ -11,7 +11,8 @@
 
 /* ::::: history button ::::: */
 
-.autocomplete-history-dropmarker {
+.autocomplete-history-dropmarker,
+.private-autocomplete-history-dropmarker {
   -moz-appearance: none !important;
   border: none !important;
   background-color: transparent !important;
@@ -24,7 +25,10 @@
 
 panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"],
-.autocomplete-history-popup {
+.autocomplete-history-popup,
+panel[type="private-autocomplete"],
+panel[type="private-autocomplete-richlistbox"],
+.private-autocomplete-history-popup {
   padding: 0px !important;
   background-color: -moz-Field;
   font: icon;
@@ -33,29 +37,33 @@ panel[type="autocomplete-richlistbox"],
 
 /* ::::: tree ::::: */
 
-.autocomplete-treebody::-moz-tree-cell-text {
+.autocomplete-treebody::-moz-tree-cell-text,
+.private-autocomplete-treebody::-moz-tree-cell-text {
   padding-left: 2px;
-                                   
 }
 
-.autocomplete-treebody::-moz-tree-row {
+.autocomplete-treebody::-moz-tree-row,
+.private-autocomplete-treebody::-moz-tree-row {
   border-top: none;
 }
 
 /* ::::: richlistbox autocomplete ::::: */
 
-.autocomplete-richlistbox {
+.autocomplete-richlistbox,
+.private-autocomplete-richlistbox {
   -moz-appearance: none;
   margin: 0;
 }
 
-.autocomplete-richlistitem[selected="true"] {
+.autocomplete-richlistitem[selected="true"],
+.private-autocomplete-richlistitem[selected="true"] {
   background-color: Highlight;
   color: HighlightText;
   background-image: linear-gradient(rgba(255,255,255,0.3), transparent);
 }
 
-.autocomplete-richlistitem {
+.autocomplete-richlistitem,
+.private-autocomplete-richlistitem {
   padding: 5px 2px;
 }
 
@@ -68,14 +76,22 @@ panel[type="autocomplete-richlistbox"],
 .autocomplete-richlistitem[actiontype="keyword"] .ac-url-box,
 .autocomplete-richlistitem[actiontype="searchengine"] .ac-url-box,
 .autocomplete-richlistitem[actiontype="visiturl"] .ac-url-box,
-.autocomplete-richlistitem[type~="autofill"] .ac-url-box {
+.autocomplete-richlistitem[type~="autofill"] .ac-url-box,
+.private-autocomplete-richlistitem[actiontype="keyword"] .ac-url-box,
+.private-autocomplete-richlistitem[actiontype="searchengine"] .ac-url-box,
+.private-autocomplete-richlistitem[actiontype="visiturl"] .ac-url-box,
+.private-autocomplete-richlistitem[type~="autofill"] .ac-url-box {
   visibility: hidden;
 }
 
 .autocomplete-richlistitem[actiontype="keyword"] .ac-title-box,
 .autocomplete-richlistitem[actiontype="searchengine"] .ac-title-box,
 .autocomplete-richlistitem[actiontype="visiturl"] .ac-title-box,
-.autocomplete-richlistitem[type~="autofill"] .ac-title-box {
+.autocomplete-richlistitem[type~="autofill"] .ac-title-box,
+.private-autocomplete-richlistitem[actiontype="keyword"] .ac-title-box,
+.private-autocomplete-richlistitem[actiontype="searchengine"] .ac-title-box,
+.private-autocomplete-richlistitem[actiontype="visiturl"] .ac-title-box,
+.private-autocomplete-richlistitem[type~="autofill"] .ac-title-box {
   /* Center the title by moving it down by half of .ac-url-box's height,
      including vertical margins (if any). */
   transform: translateY(.5em);

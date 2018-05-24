@@ -13,7 +13,10 @@
 
 panel[type="autocomplete"],
 panel[type="autocomplete-richlistbox"],
-.autocomplete-history-popup {
+.autocomplete-history-popup,
+panel[type="private-autocomplete"],
+panel[type="private-autocomplete-richlistbox"],
+.private-autocomplete-history-popup {
   -moz-appearance: none;
   border: 1px solid ThreeDShadow;
   padding: 0;
@@ -23,24 +26,28 @@ panel[type="autocomplete-richlistbox"],
 
 /* ::::: tree ::::: */
 
-.autocomplete-tree {
+.autocomplete-tree,
+.private-autocomplete-tree {
   color: MenuText;
 }
 
 /* ::::: richlistbox autocomplete ::::: */
 
-.autocomplete-richlistbox {
+.autocomplete-richlistbox,
+.private-autocomplete-richlistbox {
   -moz-appearance: none;
   margin: 1px;
   background-color: transparent;
 }
 
-.autocomplete-richlistitem[selected="true"] {
+.autocomplete-richlistitem[selected="true"],
+.private-autocomplete-richlistitem[selected="true"] {
   background-color: Highlight;
   color: HighlightText;
 }
 
-.autocomplete-richlistitem {
+.autocomplete-richlistitem,
+.private-autocomplete-richlistitem {
   padding: 6px 2px;
   color: MenuText;
 }
