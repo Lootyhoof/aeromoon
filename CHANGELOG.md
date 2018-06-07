@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.1.0
+- add initial Pale Moon 28 support
+- don't use background image on standalone image viewer
+
 ### 2.0.2
 - set minimum supported version to Pale Moon 27.5.0
 - fix statusbar progressmeter custom colors
