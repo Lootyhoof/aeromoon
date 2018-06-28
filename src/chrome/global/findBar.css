@@ -30,6 +30,10 @@ findbar[hidden] {
   transition-delay: 0s, 0s, 150ms;
 }
 
+.browserContainer > findbar {
+  text-shadow: none;
+}
+
 /* find-next button */
 
 .findbar-find-next {
