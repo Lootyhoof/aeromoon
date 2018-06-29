@@ -48,6 +48,19 @@
   outline: 1px dotted;
 }
 
+/* TOGGLE */
+#newtab-toggle {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: -216px 0 transparent url(chrome://browser/skin/newtab/controls.png);
+}
+
+#newtab-toggle[page-disabled] {
+  background-position: -232px 0;
+}
+
 /* ROWS */
 .newtab-row {
   margin-bottom: 20px;
@@ -88,7 +101,7 @@
 
 .newtab-site:hover,
 .newtab-site[dragged] {
-  box-shadow: 0 3px 10px rgba(8,20,37,.6);
+  box-shadow: 0 3px 6px 1px rgba(8,20,37,.6);
 }
 
 .newtab-site[dragged] {
