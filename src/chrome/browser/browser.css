@@ -1591,6 +1591,12 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   -moz-padding-start: 0px;
 }
 
+.browserContainer > findbar {
+  background-color: var(--dialog-color);
+  color: var(--dialog-text-color);
+  text-shadow: none;
+}
+
 /* ::::: throbber ::::: */
 
 #navigator-throbber {
