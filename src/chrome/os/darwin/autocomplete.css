@@ -101,15 +101,15 @@ panel[type="private-autocomplete-richlistbox"],
   width: 16px; 
   height: 16px;
   margin-bottom: -1px;
-  -moz-margin-start: 7px;
-  -moz-margin-end: 5px;
+  margin-inline-start: 7px;
+  margin-inline-end: 5px;
 }
 
 .ac-type-icon {
   width: 16px;
   height: 16px;
-  -moz-margin-start: 6px;
-  -moz-margin-end: 4px;
+  margin-inline-start: 6px;
+  margin-inline-end: 4px;
 }
 
 .ac-url-box > .ac-site-icon,

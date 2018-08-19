@@ -52,8 +52,8 @@
 .webconsole-msg-body {
   margin-top: 0;
   margin-bottom: 3px;
-  -moz-margin-start: 3px;
-  -moz-margin-end: 6px;
+  margin-inline-start: 3px;
+  margin-inline-end: 6px;
   white-space: pre-wrap;
 }
 
@@ -86,8 +86,8 @@
 .webconsole-location {
   margin-top: 0;
   margin-bottom: 0;
-  -moz-margin-start: 0;
-  -moz-margin-end: 6px;
+  margin-inline-start: 0;
+  margin-inline-end: 6px;
   width: 10em;
   text-align: end;
 }
@@ -126,13 +126,13 @@
 
 .webconsole-filter-button > .toolbarbutton-menubutton-button,
 .webconsole-filter-button > .toolbarbutton-menubutton-button:hover:active {
-  -moz-padding-start: 6px;
-  -moz-padding-end: 3px;
+  padding-inline-start: 6px;
+  padding-inline-end: 3px;
 }
 
 .webconsole-filter-button {
-  -moz-margin-start: 3px;
-  -moz-margin-end: 3px;
+  margin-inline-start: 3px;
+  margin-inline-end: 3px;
 }
 
 /* Network styles */
@@ -141,7 +141,7 @@
 }
 
 .webconsole-msg-network > .webconsole-msg-icon-container {
-  -moz-border-start: solid #000 6px;
+  border-inline-start: solid #000 6px;
 }
 
 .webconsole-msg-network.webconsole-msg-error {
@@ -154,7 +154,7 @@
 }
 
 .webconsole-msg-cssparser > .webconsole-msg-icon-container {
-  -moz-border-start: solid #00b6f0 6px;
+  border-inline-start: solid #00b6f0 6px;
 }
 
 .webconsole-msg-cssparser.webconsole-msg-error {
@@ -171,7 +171,7 @@
 }
 
 .webconsole-msg-exception > .webconsole-msg-icon-container {
-  -moz-border-start: solid #fb9500 6px;
+  border-inline-start: solid #fb9500 6px;
 }
 
 .webconsole-msg-exception.webconsole-msg-error {
@@ -188,7 +188,7 @@
 }
 
 .webconsole-msg-console > .webconsole-msg-icon-container {
-  -moz-border-start: solid #cbcbcb 6px;
+  border-inline-start: solid #cbcbcb 6px;
 }
 
 .webconsole-msg-console.webconsole-msg-error,

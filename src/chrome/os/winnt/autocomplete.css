@@ -64,8 +64,8 @@ panel[type="private-autocomplete-richlistbox"],
 .ac-type-icon {
   width: 16px; 
   height: 16px;
-  -moz-margin-start: 6px;
-  -moz-margin-end: 4px;
+  margin-inline-start: 6px;
+  margin-inline-end: 4px;
   margin-bottom: -1px;
 }
 

@@ -47,8 +47,8 @@ toolbarbutton.bookmark-item:hover:active,
 toolbarbutton.bookmark-item[open="true"] {
   padding-top: 3px;
   padding-bottom: 1px;
-  -moz-padding-start: 4px;
-  -moz-padding-end: 2px;
+  padding-inline-start: 4px;
+  padding-inline-end: 2px;
 }
 
 .bookmark-item > .toolbarbutton-icon {
@@ -148,7 +148,7 @@ toolbarbutton.bookmark-item[open="true"] {
   height: auto;
   padding: 0;
   margin: 0;
-  -moz-margin-start: .5em;
+  margin-inline-start: .5em;
 }
 
 #appmenu-toolbar-button > label {
