@@ -1,1 +1,317 @@
-@import url("chrome://appver/skin/newTab.css");
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+:root {
+  -moz-appearance: none;
+  font-size: 75%;
+  background-color: transparent;
+}
+
+/* SCROLLBOX */
+#newtab-vertical-margin {
+  background-color: rgb(229,229,229);
+  background-image: url(chrome://browser/skin/newtab/noise.png),
+                    linear-gradient(rgba(255,255,255,.5), rgba(255,255,255,.2));
+  background-attachment: fixed;
+}
+
+/* UNDO */
+#newtab-undo-container {
+  padding: 4px 3px;
+  border: 1px solid;
+  border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
+  background-color: rgba(255,255,255,.4);
+  color: #525e69;
+}
+
+#newtab-undo-label {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
+.newtab-undo-button:hover {
+  text-decoration: underline;
+}
+
+.newtab-undo-button:-moz-focusring {
+  outline: 1px dotted;
+}
+
+#newtab-undo-close-button {
+  -moz-appearance: none;
+  padding: 0;
+  border: none;
+}
+
+#newtab-undo-close-button {
+  -moz-appearance: none;
+  padding: 0;
+  border: none;
+  height: 16px;
+  width: 16px;
+  float: right;
+  right: 0;
+  background-image: -moz-image-rect(url(chrome://global/skin/icons/close.png), 0, 16, 16, 0);
+  background-color: transparent;
+}
+
+#newtab-undo-close-button:hover {
+  background-image: -moz-image-rect(url(chrome://global/skin/icons/close.png), 0, 32, 16, 16);
+}
+
+#newtab-undo-close-button:hover:active {
+  background-image: -moz-image-rect(url(chrome://global/skin/icons/close.png), 0, 48, 16, 32);
+}
+
+/* TOGGLE */
+#newtab-toggle {
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border: none;
+  background: -216px 0 transparent url(chrome://browser/skin/newtab/controls.png);
+}
+
+#newtab-toggle[page-disabled] {
+  background-position: -232px 0;
+}
+
+/* ROWS */
+.newtab-row {
+  margin-bottom: 20px;
+}
+
+.newtab-row:last-child {
+  margin-bottom: 0;
+}
+
+/* CELLS */
+.newtab-cell {
+  -moz-margin-end: 20px;
+  background-color: rgba(255,255,255,.2);
+  border: 1px solid;
+  border-color: rgba(8,22,37,.12) rgba(8,22,37,.14) rgba(8,22,37,.16);
+  border-radius: 1px;
+  transition: border-color 100ms ease-out;
+}
+
+.newtab-cell:empty {
+  border: 1px dashed;
+  border-color: rgba(8,22,37,.15) rgba(8,22,37,.17) rgba(8,22,37,.19);
+}
+
+.newtab-cell:last-child {
+  -moz-margin-end: 0;
+}
+
+.newtab-cell:hover:not(:empty):not([dragged]) {
+  border-color: rgba(8,22,37,.25) rgba(8,22,37,.27) rgba(8,22,37,.3);
+}
+
+/* SITES */
+.newtab-site {
+  text-decoration: none;
+  transition-property: top, left, opacity, box-shadow, background-color;
+}
+
+.newtab-site:hover,
+.newtab-site[dragged] {
+  box-shadow: 0 3px 6px 1px rgba(8,20,37,.6);
+}
+
+.newtab-site[dragged] {
+  transition-property: box-shadow, background-color;
+  background-color: rgb(242,242,242);
+}
+
+/* THUMBNAILS */
+.newtab-thumbnail {
+  background-origin: padding-box;
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* TITLES */
+.newtab-title {
+  padding: 0 8px 1px;
+  background-color: rgba(248,249,251,.95);
+  color: #1f364c;
+  line-height: 24px;
+}
+
+.newtab-site[pinned] .newtab-title {
+  padding-inline-start: 16px;
+}
+
+.newtab-site[pinned] .newtab-title::before {
+  background-image: url(chrome://browser/skin/newtab/pinned.png);
+  content: "";
+  left: 2px;
+  top: 2px;
+  position: absolute;
+  width: 12px;
+  height: 20px;
+}
+
+.newtab-site[pinned] .newtab-title:dir(rtl)::before {
+  left: auto;
+  right: 2px;
+}
+
+/* CONTROLS */
+.newtab-control {
+  background-color: transparent;
+  background-size: 24px;
+  border: none;
+  height: 24px;
+  width: 24px;
+  top: 4px;
+  background: transparent url(chrome://browser/skin/newtab/controls.png);
+}
+
+.newtab-control-pin:dir(ltr),
+.newtab-control-block:dir(rtl) {
+  left: 4px;
+}
+
+.newtab-control-block:dir(ltr),
+.newtab-control-pin:dir(rtl) {
+  right: 4px;
+}
+
+.newtab-control-pin:hover {
+  background-position: -24px 0;
+}
+
+.newtab-control-pin:active {
+  background-position: -48px 0;
+}
+
+.newtab-site[pinned] .newtab-control-pin {
+  background-position: -72px 0;
+}
+
+.newtab-site[pinned] .newtab-control-pin:hover {
+  background-position: -96px 0;
+}
+
+.newtab-site[pinned] .newtab-control-pin:active {
+  background-position: -120px 0;
+}
+
+.newtab-control-block {
+  background-position: -144px 0;
+}
+
+.newtab-control-block:hover {
+  background-position: -168px 0;
+}
+
+.newtab-control-block:active {
+  background-position: -192px 0;
+}
+
+
+.newtab-undo-button {
+  -moz-appearance: none;
+  color: -moz-nativehyperlinktext;
+  color: rgb(0,102,204);
+  cursor: pointer;
+  padding: 0;
+  margin: 0 4px;
+  border: 0;
+  background: transparent;
+  text-decoration: none;
+  min-width: 0;
+}
+
+.newtab-undo-button > .button-box {
+  padding: 0;
+}
+
+#newtab-undo-close-button {
+  -moz-appearance: none;
+  padding: 0;
+  border: none;
+  -moz-user-focus: normal;
+}
+
+/* SEARCH */
+#searchText {
+  -moz-box-flex: 1;
+  padding: 6px 8px;
+  background: hsla(0,0%,100%,.9) padding-box;
+  border: 1px solid;
+  border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.17) hsla(210,54%,20%,.2);
+  box-shadow: 0 1px 0 hsla(210,65%,9%,.02) inset,
+              0 0 2px hsla(210,65%,9%,.1) inset,
+              0 1px 0 hsla(0,0%,100%,.2);
+  border-radius: 2.5px 0 0 2.5px;
+}
+
+#searchLogoContainer:not([hidden]) ~ #searchText {
+  padding-inline-start: 38px;
+}
+
+#searchText:-moz-dir(rtl) {
+  border-radius: 0 2.5px 2.5px 0;
+}
+
+#searchText:focus,
+#searchText[autofocus] {
+  border-color: hsla(206,100%,60%,.6) hsla(206,76%,52%,.6) hsla(204,100%,40%,.6);
+}
+
+#searchSubmit {
+  margin-inline-start: -1px;
+  background: linear-gradient(hsla(0,0%,100%,.8), hsla(0,0%,100%,.1)) padding-box;
+  padding: 0 9px;
+  border: 1px solid;
+  border-color: hsla(210,54%,20%,.15) hsla(210,54%,20%,.17) hsla(210,54%,20%,.2);
+  border-inline-start: 1px solid transparent;
+  box-shadow: 0 0 2px hsla(0,0%,100%,.5) inset,
+              0 1px 0 hsla(0,0%,100%,.2);
+  border-radius: 0 2.5px 2.5px 0;
+  transition-property: border-color, box-shadow;
+  transition-duration: 150ms;
+}
+
+#searchSubmit:-moz-dir(rtl) {
+  border-radius: 2.5px 0 0 2.5px;
+}
+
+#searchText:focus + #searchSubmit,
+#searchText + #searchSubmit:hover,
+#searchText[autofocus] + #searchSubmit {
+  border-color: #59b5fc #45a3e7 #3294d5;
+  color: white;
+}
+
+#searchText:focus + #searchSubmit,
+#searchText[autofocus] + #searchSubmit {
+  background-image: linear-gradient(#4cb1ff, #1793e5);
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.2) inset,
+              0 0 0 1px hsla(0,0%,100%,.1) inset,
+              0 1px 0 hsla(210,54%,20%,.03);
+}
+
+#searchText + #searchSubmit:hover {
+  background-image: linear-gradient(#66bdff, #0d9eff);
+  box-shadow: 0 1px 0 hsla(0,0%,100%,.2) inset,
+              0 0 0 1px hsla(0,0%,100%,.1) inset,
+              0 1px 0 hsla(210,54%,20%,.03),
+              0 0 4px hsla(206,100%,20%,.2);
+}
+
+#searchText + #searchSubmit:hover:active {
+  box-shadow: 0 1px 1px hsla(211,79%,6%,.1) inset,
+              0 0 1px hsla(211,79%,6%,.2) inset;
+  transition-duration: 0ms;
+}
+
+#searchLogoContainer > * {
+  transform: scale(.75);
+}
