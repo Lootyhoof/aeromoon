@@ -709,26 +709,9 @@ toolbarbutton.bookmark-item[open="true"] {
     background-clip: padding-box;
   }
 
-  #urlbar,
-  .searchbar-textbox {
-    background-color: rgba(255,255,255,.725);
-    border-color: rgba(0,0,0,.32);
-    color: black;
-  }
-
   html|*.urlbar-input:-moz-placeholder,
   .searchbar-textbox > .autocomplete-textbox-container > .textbox-input-box > html|*.textbox-input:-moz-placeholder {
     color: #777;
-  }
-
-  #urlbar:hover,
-  .searchbar-textbox:hover {
-    background-color: rgba(255,255,255,.898);
-  }
-
-  #urlbar[focused="true"],
-  .searchbar-textbox[focused="true"] {
-    background-color: white;
   }
 
   .tabbrowser-tab:not(:-moz-lwtheme) {

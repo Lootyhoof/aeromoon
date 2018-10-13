@@ -1179,6 +1179,23 @@ toolbar[iconsize="small"]:not(#TabsToolbar) #alltabs-button {
   display: none;
 }
 
+#urlbar:-moz-lwtheme,
+.searchbar-textbox:-moz-lwtheme {
+  background-color: rgba(255,255,255,.725);
+  border-color: rgba(0,0,0,.32);
+  color: black;
+}
+
+#urlbar:-moz-lwtheme:hover,
+.searchbar-textbox:-moz-lwtheme:hover {
+  background-color: rgba(255,255,255,.898);
+}
+
+#urlbar[focused="true"]:-moz-lwtheme,
+.searchbar-textbox[focused="true"]:-moz-lwtheme {
+  background-color: white;
+}
+
 /* Keep the URL bar LTR */
 
 #urlbar .autocomplete-textbox-container {
@@ -1227,7 +1244,7 @@ toolbar[iconsize="small"]:not(#TabsToolbar) #alltabs-button {
 }
 
 #identity-box:-moz-locale-dir(ltr) {
-  border-radius: 6px 0 2px 6px / 15px 0 2px 15px;
+  border-radius: 10px 0 2px 10px / 15px 0 2px 15px;
   margin: -1px 0;
   margin-inline-start: -4px;
   padding-inline-start: 2px;
@@ -2000,10 +2017,10 @@ tabpanels {
 }
 
 #TabsToolbar .tabs-alltabs-button:not(:-moz-lwtheme) {
-  background-color: var(--dialog-color);
   border-left: 1px solid var(--shadow-color) !important;
   border-top: 1px solid var(--shadow-color) !important;
   border-bottom: 1px solid var(--shadow-color) !important;
+  border-right: none;
   margin-bottom: -1px !important;
   border-top-left-radius: 2px;
   padding-top: 0 !important;
