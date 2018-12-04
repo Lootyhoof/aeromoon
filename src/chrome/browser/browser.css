@@ -23,7 +23,7 @@
   --toolbar-highlight-bottom: transparent;
 
   --tab-background: url("chrome://browser/skin/tabbrowser/tab-bkgnd.png") repeat-x;
-  --tab-background-hover: url("chrome://browser/skin/tabbrowser/tab-hover-bkgnd.apng") 0px -2px repeat-x;
+  --tab-background-hover: url("chrome://browser/skin/tabbrowser/tab-hover-bkgnd.png") 0px 0px repeat-x;
   --tab-border-radius: 2px;
   --tab-selected-background: var(--dialog-color) url("chrome://browser/skin/tabbrowser/tab-active-bkgnd.png") repeat-x;
 
