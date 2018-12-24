@@ -1,5 +1,10 @@
 # Changelog
 
+### 2.4.0
+- update in-browser developer tools
+- improve visual parity with Firefox 3
+- add tab audio indicators in Pale Moon 28.3.0+
+
 ### 2.3.0
 - sync global stylings with Pale Moon 28
 - remove redundant devtools styling
