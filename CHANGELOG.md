@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.4.1
+- add live bookmark visited indication
+
 ### 2.4.0
 - update in-browser developer tools
 - improve visual parity with Firefox 3
