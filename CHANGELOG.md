@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.5.0
+- update Reader View styling to reflect changes in Pale Moon 28.6.0+
+- macOS: improve tab audio indicator visibility
+
 ### 2.4.1
 - add live bookmark visited indication
 
