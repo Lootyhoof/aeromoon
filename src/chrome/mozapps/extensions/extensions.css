@@ -118,7 +118,6 @@
   margin: 3px 0;
 }
 
-
 /*** view alert boxes ***/
 
 .alert-container {
@@ -621,6 +620,13 @@
   background-image: url("chrome://mozapps/skin/extensions/stripes-warning.png"),
                     linear-gradient(rgba(255, 255, 0, 0.04),
                                     rgba(255, 255, 0, 0));
+  background-repeat: repeat-x;
+}
+
+.addon-view[notification="warning"][native="false"] {
+  background-image: url("chrome://mozapps/skin/extensions/stripes-compatibility.png"),
+                    linear-gradient(rgba(255, 128, 0, 0.04),
+                                    rgba(255, 128, 0, 0));
   background-repeat: repeat-x;
 }
 
