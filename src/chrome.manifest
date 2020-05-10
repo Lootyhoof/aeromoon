@@ -3,8 +3,8 @@ skin	communicator	aeromoon	chrome/communicator/
 skin	global		aeromoon	chrome/global/
 skin	mozapps		aeromoon	chrome/mozapps/
 
-skin	os			aeromoon	chrome/os/winnt/		os=WINNT	
-skin	os			aeromoon	chrome/os/linux/		os=Linux
+skin	os			aeromoon	chrome/os/linux/
+skin	os			aeromoon	chrome/os/winnt/		os=WINNT
 skin	os			aeromoon	chrome/os/darwin/		os=Darwin
 
 override chrome://browser/skin/autocomplete.css chrome://global/skin/autocomplete.css
