@@ -27,6 +27,7 @@
   --tab-border-radius: 2px;
   --tab-selected-background: var(--dialog-color) url("chrome://browser/skin/tabbrowser/tab-active-bkgnd.png") repeat-x;
 
+  --toolbarbutton-color: #000000;
   --toolbarbutton-large-image: url("chrome://browser/skin/Toolbar-large.png");
   --toolbarbutton-small-image: url("chrome://browser/skin/Toolbar-small.png");
   
@@ -61,6 +62,7 @@
 #navigator-toolbox > toolbar:not(#TabsToolbar):not(:-moz-lwtheme) {
   -moz-appearance: none;
   border-style: none;
+  color: var(--toolbarbutton-color);
 }
 
 #main-window:not([tabsintitlebar]) #navigator-toolbox:not(:-moz-lwtheme) {
@@ -1782,6 +1784,7 @@ richlistitem[type~="action"][actiontype="switchtab"][selected="true"] > .ac-url-
   border: 2px solid;
   border-right-width: 1px;
   border-bottom: none;
+  color: var(--toolbarbutton-color);
   -moz-border-top-colors: var(--shadow-color) rgba(255,255,255,.3);
   -moz-border-left-colors: var(--shadow-color) rgba(255,255,255,.3);
   margin-bottom: 0;

@@ -1,5 +1,16 @@
+:root {
+  --field-color: #ffffff;
+}
+
 #main-menubar > menu:not(:-moz-lwtheme) {
   color: -moz-DialogText;
+}
+
+#nav-bar:not(:-moz-lwtheme) textbox,
+#PersonalToolbar:not(:-moz-lwtheme) textbox,
+#TabsToolbar[tabsontop=false]:not(:-moz-lwtheme) textbox {
+  background-color: var(--field-color);
+  color: var(--toolbarbutton-color);
 }
 
 #TabsToolbar[tabsontop="true"] .tabbrowser-tabs {
@@ -41,6 +52,10 @@
 toolbarbutton.bookmark-item {
   margin: 0;
   padding: 2px 3px;
+}
+
+toolbarbutton.bookmark-item:not(:hover):not(:active):not([open]) {
+  color: var(--toolbarbutton-color);
 }
 
 toolbarbutton.bookmark-item:hover:active,
