@@ -1,5 +1,12 @@
 # Changelog
 
+### 2.6.0
+- improve fullscreen styling
+- support other GTK-based operating systems
+- improve support for custom statusbars
+- Linux: improve appearance on dark system themes
+- internal cleanup
+
 ### 2.5.2
 - Pale Moon 29: clarify the status of Firefox extensions in the Add-ons Manager
 
