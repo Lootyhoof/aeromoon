@@ -1,9 +1,9 @@
 # Changelog
 
 ### 2.6.0
-- improve fullscreen styling
 - support other GTK-based operating systems
-- improve support for custom statusbars
+- provide platform-specific custom statusbar styling to ensure it works in all platforms
+- Windows/Linux: improve fullscreen styling
 - Linux: improve appearance on dark system themes
 - internal cleanup
 
