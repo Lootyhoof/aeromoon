@@ -1,5 +1,9 @@
 # Changelog
 
+### 2.6.1
+- make places sidebars more Aero-like
+- make go button more Aero-like
+
 ### 2.6.0
 - support other GTK-based operating systems
 - provide platform-specific custom statusbar styling to ensure it works in all platforms
