@@ -3,6 +3,7 @@
 ### 2.6.1
 - make places sidebars more Aero-like
 - make go button more Aero-like
+- don't let the download indicator grow the toolbar
 
 ### 2.6.0
 - support other GTK-based operating systems
