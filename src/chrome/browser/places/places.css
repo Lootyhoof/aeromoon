@@ -142,3 +142,17 @@ treechildren::-moz-tree-cell-text(cutting) {
   width: auto;
   margin-inline-end: -3px;
 }
+
+/* Style Places sidebars as Vista media collection */
+#bookmarksPanel,
+#history-panel {
+  -moz-appearance: none;
+  background-color: #EEF3FA;
+  color: #000000;
+}
+
+.sidebar-placesTree {
+  background-color: transparent;
+  border-top: none;
+  color: #000000;
+}
