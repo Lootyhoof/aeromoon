@@ -1,5 +1,10 @@
-html {
-  background: -moz-Dialog;
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+
+ html {
+  background: -moz-dialog;
 }
 
 body {
@@ -29,10 +34,10 @@ h2 {
   padding: 3em;
   padding-inline-start: 30px;
   background: url("chrome://global/skin/icons/sslWarning.png") left 0 no-repeat -moz-Field;
-  background-origin: content;
+  background-origin: content-box;
 }
 
-body[dir="rtl"] #errorPageContainer {
+#errorPageContainer:-moz-dir(rtl) {
   background-position: right 0;
 }
 
@@ -44,11 +49,24 @@ body[dir="rtl"] #errorPageContainer {
   margin-inline-start: 80px;
 }
 
-#technicalContent > h2, #expertContent > h2 {
-  background : url("chrome://browser/skin/section_expanded.png") left center no-repeat;
+.expander > button {
+  padding-inline-start: 20px;
+  margin-inline-start: -20px;
+  background: url("chrome://browser/skin/aboutCertError_sectionExpanded.png") left center no-repeat;
+  border: none;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
 }
 
-#technicalContent[collapsed] > h2,
-#expertContent[collapsed] > h2{
-  background-image: url("chrome://browser/skin/section_collapsed.png");
+.expander > button:-moz-dir(rtl) {
+  background-position: right center;
+}
+
+.expander[collapsed] > button {
+  background-image: url("chrome://browser/skin/aboutCertError_sectionCollapsed.png");
+}
+
+.expander[collapsed] > button:-moz-dir(rtl) {
+  background-image: url("chrome://browser/skin/aboutCertError_sectionCollapsed-rtl.png");
 }
