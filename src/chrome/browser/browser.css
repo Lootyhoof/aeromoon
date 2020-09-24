@@ -1236,7 +1236,8 @@ toolbar[iconsize="small"]:not(#TabsToolbar) #alltabs-button {
 }
 
 #identity-box.verifiedDomain,
-#identity-box.verifiedIdentity {
+#identity-box.verifiedIdentity,
+#identity-box.mixedContent {
   border-color: rgba(0,0,0,.2) !important;
   color: white;
 }
@@ -1244,7 +1245,9 @@ toolbar[iconsize="small"]:not(#TabsToolbar) #alltabs-button {
 #identity-box.verifiedDomain[open="true"],
 #identity-box.verifiedDomain:hover:active,
 #identity-box.verifiedIdentity[open="true"],
-#identity-box.verifiedIdentity:hover:active {
+#identity-box.verifiedIdentity:hover:active,
+#identity-box.mixedContent[open="true"],
+#identity-box.mixedContent:hover:active {
   border-color: rgba(0,0,0,.2) rgba(0,0,0,.4) !important;
 }
 
@@ -1284,13 +1287,27 @@ toolbar[iconsize="small"]:not(#TabsToolbar) #alltabs-button {
   background-position: 0 -480px;
 }
 
+#identity-box.mixedContent {
+  background-position: 0 -540px;
+}
+
+#identity-box.mixedContent:hover {
+  background-position: 0 -600px;
+}
+
+#identity-box.mixedContent[open="true"],
+#identity-box.mixedContent:hover:active {
+  background-position: 0 -660px;
+}
+
 #identity-box:focus {
   outline: 1px dotted var(--dialog-text-color);
   outline-offset: -3px;
 }
 
-#identity-box.verifiedDomain:focus ,
-#identity-box.verifiedIdentity:focus {
+#identity-box.verifiedDomain:focus,
+#identity-box.verifiedIdentity:focus
+#identity-box.mixedContent:focus {
   outline: 1px dotted white;
 }
 
