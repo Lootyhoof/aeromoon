@@ -1306,7 +1306,7 @@ toolbar[iconsize="small"]:not(#TabsToolbar) #alltabs-button {
 }
 
 #identity-box.verifiedDomain:focus,
-#identity-box.verifiedIdentity:focus
+#identity-box.verifiedIdentity:focus,
 #identity-box.mixedContent:focus {
   outline: 1px dotted white;
 }
