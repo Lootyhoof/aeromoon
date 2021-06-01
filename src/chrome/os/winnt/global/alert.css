@@ -1,0 +1,76 @@
+/* This Source Code Form is subject to the terms of the Mozilla Public
+ * License, v. 2.0. If a copy of the MPL was not distributed with this
+ * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+/* ===== alert.css =====================================================
+  == Styles specific to the alerts dialog.
+  ======================================================================= */
+
+#alertBox[animate] {
+  animation-timing-function: cubic-bezier(.12,1.23,.48,1.09);
+}
+
+#alertBox[animate][clicked] {
+  animation-name: alert-clicked-animation;
+}
+
+/* This is used if the close button is clicked
+   before the animation has finished. */
+#alertBox[animate][closing] {
+  animation-name: alert-closing-animation;
+}
+
+#alertBox[animate]:not([clicked]):not([closing]):hover {
+  /* !important is necessary because CSS animations have highest
+     importance in the cascade with exception to !important rules. */
+  opacity: 1 !important;
+}
+
+@keyframes alert-animation {
+  from {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes alert-clicked-animation {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes alert-closing-animation {
+  to {
+    opacity: 0;
+  }
+}
+
+#alertNotification {
+  -moz-appearance: none;
+  background: transparent;
+  padding: 10px;
+}
+
+#alertBox {
+  border: 1px solid ThreeDShadow;
+  border-radius: 1px;
+  background-color: -moz-Dialog;
+  color: -moz-DialogText;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.59);
+}
+
+@media (-moz-windows-default-theme) {
+  #alertBox {
+    border-color: rgba(107,107,107,.3);
+    background-color: rgba(255,255,255,.9);
+    color: rgba(0,0,0,.9);
+  }
+}
