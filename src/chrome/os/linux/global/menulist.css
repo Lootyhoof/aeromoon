@@ -73,6 +73,8 @@ menulist[editable="true"] {
 menulist[editable="true"] > .menulist-dropmarker {
   display: -moz-box;
   -moz-appearance: menulist-button;
+  min-width: 2.5em;
+  min-height: 2.25em;
 }
 
 html|*.menulist-editable-input {
