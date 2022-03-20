@@ -1,5 +1,12 @@
 # Changelog
 
+### 2.7.0
+- add mixed-mode SSL indicator
+- improve certificate error page
+- improve findbar textbox appearance
+- use OS-specific alert styling
+- support Pale Moon 30
+
 ### 2.6.1
 - make places sidebars more Aero-like
 - make go button more Aero-like
