@@ -1,5 +1,8 @@
 # Changelog
 
+### 2.8.2
+- support Pale Moon 33
+
 ## 2.8.1
 - support Pale Moon 32
 
