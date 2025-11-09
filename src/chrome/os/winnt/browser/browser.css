@@ -37,9 +37,11 @@
 }
 
 @media not all and (-moz-os-version: windows-win10) {
-  #main-window[tabsintitlebar] .tabbrowser-tab:not([selected]),
-  #main-window[tabsintitlebar] .tabs-newtab-button{
-    border-bottom: 1px solid ThreeDShadow;
+  @media not all and (-moz-os-version: windows-win11) {
+    #main-window[tabsintitlebar] .tabbrowser-tab:not([selected]),
+    #main-window[tabsintitlebar] .tabs-newtab-button{
+      border-bottom: 1px solid ThreeDShadow;
+    }
   }
 }
 
@@ -265,14 +267,22 @@ toolbarbutton.bookmark-item[open="true"] {
     -moz-appearance: -moz-win-exclude-glass;
   }
 
-/* ==== Windows 10 styling ==== */
+/* ==== Windows 10/11 styling ==== */
 
-@media (-moz-os-version: windows-win10) {
-  /* Draw XUL caption buttons and background on Win10 */
+@media (-moz-os-version: windows-win10),
+       (-moz-os-version: windows-win11) {
+  /* Draw XUL caption buttons and background on Win10/11 */
   @media (-moz-windows-accent-color-applies: 0) {
     /* Default styling for when no accent color is applied */
     #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
       background-color: white;
+    }
+    
+    @media (-moz-os-version: windows-win11) {
+      #main-window:not(:-moz-window-inactive):not(:-moz-lwtheme) {
+        /* Windows 11 defaults to RGB 243 */
+        background-color: rgb(243,243,243);
+      }
     }
     
     :root:not(:-moz-window-inactive):not(:-moz-lwtheme) {
@@ -295,23 +305,48 @@ toolbarbutton.bookmark-item[open="true"] {
       list-style-image: url(chrome://browser/skin/caption-buttons.svg#close);
     }
 
-    .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-      background-color: hsla(0, 0%, 0%, .17);
-    }
+    /* Windows 10 caption button effects */
+    @media (-moz-os-version: windows-win10) {
+      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+        background-color: hsla(0, 0%, 0%, .17);
+      }
 
-    .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-      background-color: hsla(0, 0%, 0%, .27);
-      transition: none;
+      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+        background-color: hsla(0, 0%, 0%, .27);
+        transition: none;
+      }
+    
+      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+        background-color: hsla(0, 86%, 49%, 1);
+      }
+
+      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+        background-color: hsla(0, 60%, 49%, 0.6);
+        transition: none;
+      }
     }
     
-    #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-      list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
-      background-color: hsla(0, 86%, 49%, 1);
-    }
+    /* Windows 11 caption button effects */
+    @media (-moz-os-version: windows-win11) {
+      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+        background-color: hsla(0, 0%, 0%, .17);
+      }
 
-    #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-      background-color: hsla(0, 60%, 49%, 0.6);
-      transition: none;
+      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+        background-color: hsla(0, 0%, 0%, .07);
+        transition: none;
+      }
+    
+      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+        list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+        background-color: hsla(0, 75%, 44%, 1);
+      }
+
+      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+        background-color: hsla(0, 61%, 48%, 1);
+        transition: none;
+      }
     }
   }
   
@@ -368,22 +403,48 @@ toolbarbutton.bookmark-item[open="true"] {
         list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
       }
     
-      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-        background-color: hsla(0, 0%, 100%, .17);
-      }
+      /* Windows 10 caption button effects */
+      @media (-moz-os-version: windows-win10) {
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          background-color: hsla(0, 0%, 100%, .17);
+        }
 
-      .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-        background-color: hsla(0, 0%, 100%, .27);
-        transition: none;
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+          background-color: hsla(0, 0%, 100%, .27);
+          transition: none;
+        }
+    
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+          background-color: hsla(0, 86%, 45%, 1);
+        }
+
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+          background-color: hsla(0, 60%, 49%, 0.6);
+          transition: none;
+        }
       }
     
-      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
-        background-color: hsla(0, 86%, 49%, 1);
-      }
+      /* Windows 11 caption button effects */
+      @media (-moz-os-version: windows-win11) {
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          background-color: hsla(0, 0%, 0%, .17);
+        }
 
-      #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active	{
-        background-color: hsla(0, 60%, 39%, 1);
-        transition: none;
+        .titlebar-button:not(#titlebar-close):not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+          background-color: hsla(0, 0%, 0%, .07);
+          transition: none;
+        }
+    
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover {
+          list-style-image: url(chrome://browser/skin/caption-buttons.svg#close-white);
+          background-color: hsla(4, 75%, 44%, 1);
+        }
+
+        #titlebar-close:not(:-moz-window-inactive):not(:-moz-lwtheme):hover:active {
+          background-color: hsla(4, 61%, 48%, 1);
+          transition: none;
+        }
       }
     }
   }
@@ -666,7 +727,8 @@ toolbarbutton.bookmark-item[open="true"] {
   }
   
   @media (-moz-os-version: windows-win8),
-         (-moz-os-version: windows-win10) {
+         (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
     /* Make the menu toolbar and tabs toolbar transparent in Aero+glass IIF tabs are on top and menu toolbar is autohidden */
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"],
     #main-window[sizemode="maximized"] #navigator-toolbox[tabsontop="true"] > #toolbar-menubar[autohide="true"],
@@ -684,7 +746,8 @@ toolbarbutton.bookmark-item[open="true"] {
     }
   }
   
-  @media (-moz-os-version: windows-win10) {
+  @media (-moz-os-version: windows-win10),
+         (-moz-os-version: windows-win11) {
     /* Fix tab borders in tabsintitlebar mode */
     #main-window[tabsintitlebar] .tabbrowser-tab:not([selected]):not(:-moz-lwtheme),
     #main-window[tabsintitlebar] .tabs-newtab-button:not(:-moz-lwtheme) {
@@ -701,9 +764,8 @@ toolbarbutton.bookmark-item[open="true"] {
     background-color: #556;
   }
 
-  /* Show toolbar borders on vista through win8, but not on win10 and later: */
-  @media (-moz-os-version: windows-vista),          
-  (-moz-os-version: windows-win7),          
+  /* Show toolbar borders on win7 and win8, but not on win10 and later: */
+  @media (-moz-os-version: windows-win7),          
   (-moz-os-version: windows-win8) {
      /* Vertical toolbar border */
     #main-window[sizemode=normal] #navigator-toolbox:not(:-moz-lwtheme) {
